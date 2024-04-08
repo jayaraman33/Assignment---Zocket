@@ -1,0 +1,63 @@
+Backend Go Lang Engineer Assessment
+
+Problem 1: Distributed Key-Value Store
+Design and implement a distributed key-value store system using Go Lang. The system
+should consist of multiple server nodes that communicate with each other to store and
+retrieve key-value pairs. The key requirements for the system are as follows:
+
+1. Scalability: The system should be horizontally scalable, allowing the addition of new
+nodes to handle increased load.
+
+2. Consistency: Ensure strong consistency guarantees across all nodes in the system,
+even
+in the presence of failures and network partitions.
+
+3. Fault Tolerance: Implement mechanisms to handle node failures gracefully and maintain
+data availability and integrity.
+
+4. Concurrency: Support concurrent read and write operations efficiently while maintaining
+data consistency.
+
+5. Partitioning: Implement data partitioning strategies to distribute key-value pairs evenly
+across multiple nodes.
+
+Your solution should include the following components:
+- A Go Lang implementation of the server nodes capable of communication and
+coordination.
+- Data structures and algorithms for distributed data storage and retrieval.
+- Mechanisms for handling node failures, network partitions, and data replication.
+- Implementation of concurrency control mechanisms to ensure data consistency and
+integrity.
+- Detailed documentation explaining the design decisions, system architecture, and
+deployment instructions.
+Define the Data Model:
+● Each key-value pair will be stored in the system. Define a struct to
+represent a key-value pair.
+
+type KeyValuePair struct {
+Key string
+Value string
+}
+
+1. Node Communication:
+● Implement a communication protocol for nodes to communicate with
+each other. You can use HTTP or TCP for inter-node communication.
+2. Partitioning Strategy:
+● Choose a partitioning strategy (e.g., consistent hashing) to distribute
+key-value pairs across nodes evenly.
+3. Replication:
+● Decide on a replication strategy (e.g., quorum replication) to replicate
+data across multiple nodes for fault tolerance.
+4. Concurrency Control:
+● Implement mechanisms for concurrency control, such as locks or
+versioning, to ensure data consistency during concurrent read and
+write operations.
+5. Failure Handling:
+● Implement mechanisms to detect and handle node failures, such as
+heartbeating and leader election.
+6. Scalability:
+● Ensure that the system is horizontally scalable by allowing the addition
+of new nodes dynamically.
+7. Consistency:
+● Guarantee strong consistency across all nodes, even in the presence of
+failures and network partitions.
